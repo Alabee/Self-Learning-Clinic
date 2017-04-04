@@ -1,4 +1,4 @@
-def prime_number_generator(n):
+def prime_numbers_generator(n):
     if not isinstance(n, int):
         return "Only integers allowed"
 
@@ -9,7 +9,7 @@ def prime_number_generator(n):
         return "No prime numbers between 0 and 0"
 
     else:
-        for x in range(2, n):
+        for x in range(2, n + 1):
             for y in range(2, x):
                 if (x % y == 0):
                     break
@@ -19,5 +19,5 @@ def prime_number_generator(n):
                 print(x)
 
 
-if __name__ = "__main__":
+if __name__ == '__main__':
     main()
