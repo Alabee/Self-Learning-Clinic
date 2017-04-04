@@ -17,3 +17,8 @@ class TestPrimeNumbersGenerator(unittest.TestCase):
     def test_n_is_is_an_integer(self):
         result = prime_numbers_generator("ian")
         self.assertEqual(result, "Only integers allowed")
+
+    def test_1_is_not_prime(self):
+        result = prime_numbers_generator(1)
+        self.assertEqual(result, "")
+        
