@@ -1,0 +1,12 @@
+import requests
+from bs4 import BeautifulSoup
+
+feedback = requests.get("https://www.amazon.com/Android-5-1-MTK6735-16-0MP-Camera-SmartPhone/dp/B016ZYW462")
+content_of_the_page = feedback.content
+search_data = BeautifulSoup(content_of_the_page, "html.parser")
+element = search_data.find("span", {"id": "priceblock_ourprice", "class":"a-size-medium a-color-price"})
+
+print(element.text)
+
+
+
