@@ -1,0 +1,57 @@
+class Student(object):
+    def __init__(self, name, id, age):
+        self.name = name
+        self.id = id
+        self.age = age
+
+
+class StudentFinance(Student):
+    def __init__(self, balance):
+        self.balance = balance
+
+    def validate(self, balance):
+        self.balance = balance
+        if not isinstance(self.balance, (int,float)):
+            return "Invalid input"
+
+        elif self.balance < 0:
+            return "Balance cannot be less than 0"
+
+
+    def action(self):
+        if self.balance  < 10000:
+            return "Send parent reminder"
+
+        else:
+            return "Send student home to collect schoolfees"
+
+class StudentPocketMoney(Student):
+    def __init__(self, balance):
+        self.balance = balance
+
+    def validate(self, balance):
+        self.balance = balance
+        if not isinstance(self.balance, (int,float)):
+            return "Invalid input"
+
+        elif self.balance < 0:
+            return "Balance cannot be less than 0"
+
+    def withdraw(self, withdraw_amt):
+        if not isinstance(withdraw_amt, (int,float)):
+            return "Invalid input"
+
+        elif withdraw_amt > self.balance:
+            return "Invalid amount. Insufficient funds"
+
+        else:
+            self.balance = self.balance - withdraw_amt
+            return self.balance
+
+    def deposit(self, deposit_amt):
+        if not isinstance(deposit_amt, (int,float)):
+            return "Invalid input"
+
+        else:
+            self.balance += deposit_amt
+            return self.balance
