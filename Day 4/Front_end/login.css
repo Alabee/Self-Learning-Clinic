@@ -1,0 +1,72 @@
+body
+{
+    font-family: Helvetica, Sans-Serif;
+    font-size: 14px;
+
+}
+input{
+	border-radius: 5px;
+}
+.logo
+{
+	margin-top: 100px;
+	margin-bottom: 25px;
+}
+.login_container
+{	
+    width: 27%;
+	height: 300px;
+    border: 1px solid;
+	border-color: #337ab7;
+	border-radius: 5px
+
+}
+.text_container
+{
+	padding: 10px;
+}
+.header
+{
+	color: #ffffff;
+	background-color: #337ab7;
+	height: 25px;
+	padding: 10px;
+}
+
+.login_btn
+{	
+	margin-bottom: 10px;
+	height: 35px;
+	background-color: #5cb85c;
+	color: #ffffff;
+}
+.reset_btn
+{	
+	height: 35px;
+	background-color: #d9534f;
+	color: #ffffff;
+}
+
+.warning
+{	
+	padding: 10px;
+	height: 40px;
+	color: #a94442;
+	background-color: #f5f5f5;
+}
+.copyright
+{
+	color: #3c763d;
+	background-color: #fcfde3;
+		
+}
+#footer {
+	
+	text-align: center;
+	color: #3c763d;
+	background-color: #fcfde3;
+	height: 80px;
+    position:fixed;
+    bottom:0;
+	width: 100%;
+}
